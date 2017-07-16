@@ -3,8 +3,9 @@ MovieType = GraphQL::ObjectType.define do
   description "A Movie"
   field :id, types.ID
   field :title, types.String
-  field :summary, types.String
   field :year, types.Int
+  field :budget_in_millions, types.Float
+  field :box_office_in_millions, types.Float
   field :actors do
     type types[ActorType]
     argument :size, types.Int, default_value: 10

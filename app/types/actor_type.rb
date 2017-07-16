@@ -1,9 +1,11 @@
 ActorType = GraphQL::ObjectType.define do
   name "Actor"
   description "An Actor"
+
   field :id, types.ID
   field :name, types.String
-  field :bio, types.String
+  field :gender, types.String
+  field :birth_date, types.String
   field :movies do
     type types[MovieType]
     argument :size, types.Int, default_value: 10
