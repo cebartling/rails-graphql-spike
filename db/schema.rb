@@ -13,8 +13,9 @@
 ActiveRecord::Schema.define(version: 20170716021452) do
 
   create_table "actors", force: :cascade do |t|
-    t.string "name"
-    t.string "bio"
+    t.string "name", null: false
+    t.date "birth_date", null: false
+    t.integer "gender", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -27,9 +28,10 @@ ActiveRecord::Schema.define(version: 20170716021452) do
   end
 
   create_table "movies", force: :cascade do |t|
-    t.string "title"
-    t.string "summary"
-    t.integer "year"
+    t.string "title", null: false
+    t.integer "year", null: false
+    t.decimal "budget_in_millions", null: false
+    t.decimal "box_office_in_millions", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
