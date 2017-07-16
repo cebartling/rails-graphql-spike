@@ -15,7 +15,7 @@ QueryType = GraphQL::ObjectType.define do
     argument :year, types.Int
     resolve -> (obj, args, ctx) {
       if args[:year].present?
-        Movie.where(year: args[:year])
+        Movie.year_released(args[:year])
       else
         Movie.all
       end
@@ -27,6 +27,18 @@ QueryType = GraphQL::ObjectType.define do
     argument :id, !types.ID
     resolve -> (obj, args, ctx) {
       Actor.find(args[:id])
+    }
+  end
+
+  field :actors do
+    type types[ActorType]
+    argument :gender, types.String
+    resolve -> (obj, args, ctx) {
+      if args[:gender].present?
+        Actor.of_gender(args[:gender])
+      else
+        Actor.all
+      end
     }
   end
 
