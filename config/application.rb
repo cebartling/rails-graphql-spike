@@ -29,5 +29,8 @@ module RailsGraphqlSpike
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Adding the app/types directory to the autoload path.
+    config.autoload_paths << Rails.root.join("app", "types")
   end
 end
