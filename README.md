@@ -22,5 +22,6 @@ The official GraphQL site is at [graphql.org](http://graphql.org).
 
 The spike solution is entirely self-contained. All dependencies are installed via Bundler.
 
-
+1. Build the SQLite database and seed it with data: `bundle exec rake db:drop db:setup db:seed`
+ 
 
