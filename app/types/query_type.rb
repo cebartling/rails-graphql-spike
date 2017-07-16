@@ -29,4 +29,5 @@ QueryType = GraphQL::ObjectType.define do
       Actor.find(args[:id])
     }
   end
+
 end

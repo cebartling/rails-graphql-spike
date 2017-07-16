@@ -1,24 +1,26 @@
-# README
+# Rails 5 GraphQL spike solution
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+## Introduction
 
-* Ruby version
+* Rails version: 5.1.2
+* Ruby version: 2.4.1
+* Database: SQLite
 
-* System dependencies
 
-* Configuration
 
-* Database creation
+## GraphQL 
+ 
+This spike solution uses the `graphql` gem. More information regarding this gem can be found 
+at [graphql-ruby.org](http://graphql-ruby.org/).
 
-* Database initialization
+The official GraphQL site is at [graphql.org](http://graphql.org).
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Running the spike solution
 
-* ...
+The spike solution is entirely self-contained. All dependencies are installed via Bundler.
+
+
+
