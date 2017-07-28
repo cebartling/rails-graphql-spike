@@ -1,33 +1,23 @@
+# Represents a movie.
 type Movie  {
     id: ID!
-    title: String
-    year: Int
-    budget_in_millions: Float
-    box_office_in_millions: Float
+    title: String!
+    year: Int!
+    budget_in_millions: Float!
+    box_office_in_millions: Float!
 
-    actors: [Actor]
+    actors: [Actor]!
 }
 
+# Represents a movie actor.
 type Actor {
     id: ID!
-    name: String
-    gender: String
-    birth_date: String
+    name: String!
+    gender: String!
+    birth_date: String!
 
-    movies: [Movie]
+    movies: [Movie]!
 }
-
-## One of the films in the Star Wars Trilogy
-#enum Episode {
-#  # Released in 1977.
-#  NEWHOPE
-#
-#  # Released in 1980.
-#  EMPIRE
-#
-#  # Released in 1983.
-#  JEDI
-#}
 
 
 ## Root Mutation
@@ -41,19 +31,28 @@ type Actor {
 
 # Root query
 type Query {
-    #  # Return the hero by episode.
-    #  hero(
-    #    # If omitted, returns the hero of the whole saga. If provided, returns the hero of that particular episode.
-    #    episode: Episode
-    #  ): Character
-    #
-
+    # Retrieve a movie by it's identifier.
     movie(
+        # Movie identifier
         id: ID!
     ): Movie
 
+    # Retrieve a collection of movies filtered by the year the movie was released.
+    movies(
+        # Movie released year filter
+        year: Int
+    ): [Movie]!
+
+    # Retrieve a actor by it's identifier.
     actor(
+        # Actor identifier
         id: ID!
     ): Actor
+
+    # Retrieve a collection of actors filtered by the actor's gender.
+    actors(
+        # Actor gender filter
+        gender: String
+    ): [Actor]!
 }
 
