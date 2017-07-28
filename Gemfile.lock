@@ -71,6 +71,8 @@ GEM
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
+    foreman (0.84.0)
+      thor (~> 0.19.1)
     gemoji (2.1.0)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -204,6 +206,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  foreman
   graphql
   graphql-docs
   jbuilder (~> 2.5)
