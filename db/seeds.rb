@@ -22,11 +22,11 @@ cate_blanchett = Actor.create!(name: 'Catherine Elise Blanchett',
                                gender: :female,
                                birth_date: Date.strptime('19690514', "%Y%m%d"))
 carrie_fisher = Actor.create!(name: 'Carrie Frances Fisher',
-                               gender: :female,
-                               birth_date: Date.strptime('19561021', "%Y%m%d"))
+                              gender: :female,
+                              birth_date: Date.strptime('19561021', "%Y%m%d"))
 mark_hamill = Actor.create!(name: 'Mark Richard Hamill',
-                               gender: :male,
-                               birth_date: Date.strptime('19510925', "%Y%m%d"))
+                            gender: :male,
+                            birth_date: Date.strptime('19510925', "%Y%m%d"))
 
 
 ####################################################################################################################
