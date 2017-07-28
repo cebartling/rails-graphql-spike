@@ -29,8 +29,10 @@ The spike solution is entirely self-contained. All dependencies are installed vi
 1. Install the **bundler** gem: `gem install bundler` 
 1. Install the project dependencies via bundler: `bundle install` 
 1. Build the SQLite database and seed it with data: `bundle exec rake db:drop db:setup db:seed`
-1. Start up the Rails web server: `rails s`
-1. Execute GraphQL queries using your favorite HTTP tool. See below for a few examples using the cURL.
+1. Install the Node.js tools for Webpacker: `./scripts/install-tools.sh`
+1. Start up the Rails web server and the Webpack dev server: `./bin/dev-server`
+1. Navigate a web browser to http://localhost:5000. The GraphiQL tool should come up.
+1. Execute GraphQL queries using GraphiQL tool or your favorite HTTP tool. See below for a few examples using the cURL.
 
 
 ## Generating the GraphQL documentation
