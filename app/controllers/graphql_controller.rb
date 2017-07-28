@@ -1,9 +1,9 @@
-class MovieController < ApplicationController
+class GraphqlController < ApplicationController
 
-  # GET /movies
+  # GET /graphql
   def query
     result = Schema.execute params[:query]
     render json: result
   end
-  
+
 end
