@@ -33,6 +33,13 @@ The spike solution is entirely self-contained. All dependencies are installed vi
 1. Execute GraphQL queries using your favorite HTTP tool. See below for a few examples using the cURL.
 
 
+## Generating the GraphQL documentation
+
+*Assumes that you are running these scripts from the Rails project root directory.*
+
+1. Install the documentation tooling using a shell script in the project: `./scripts/install-tools.sh`. You only need to do this once.
+2. Run the documentation tool: `./scripts/generate-graphql-documentation.sh`
+
 
 ## GraphQL queries
  
