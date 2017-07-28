@@ -48,7 +48,7 @@ The spike solution is entirely self-contained. All dependencies are installed vi
 ##### cURL request
 
 ```bash
-curl -XGET http://localhost:3000/movies -d "query={movie(id: 1) {title, year, actors {name, birth_date}}}"
+curl -XGET http://localhost:3000/graphql -d "query={movie(id: 1) {title, year, actors {name, birth_date}}}"
 ```
 
 ##### JSON response
@@ -80,7 +80,7 @@ curl -XGET http://localhost:3000/movies -d "query={movie(id: 1) {title, year, ac
 ##### cURL request
 
 ```bash
-curl -XGET http://localhost:3000/movies -d "query={movies(year: 1977) {title, year, actors {name, birth_date}}}"
+curl -XGET http://localhost:3000/graphql -d "query={movies(year: 1977) {title, year, actors {name, birth_date}}}"
 ```
 
 ##### JSON response
@@ -119,7 +119,7 @@ curl -XGET http://localhost:3000/movies -d "query={movies(year: 1977) {title, ye
 ##### cURL request
 
 ```bash
-curl -XGET http://localhost:3000/actors -d "query={actor(id: 1) {name, birth_date, movies {title, year, budget_in_millions, box_office_in_millions}}}"
+curl -XGET http://localhost:3000/graphql -d "query={actor(id: 1) {name, birth_date, movies {title, year, budget_in_millions, box_office_in_millions}}}"
 ```
 
 ##### JSON response
@@ -192,7 +192,7 @@ curl -XGET http://localhost:3000/actors -d "query={actor(id: 1) {name, birth_dat
 ##### cURL request
 
 ```bash
-curl -XGET http://localhost:3000/actors -d "query={actors(gender: "female") {name, birth_date, movies {title, year, budget_in_millions, box_office_in_millions}}}"
+curl -XGET http://localhost:3000/graphql -d "query={actors(gender: "female") {name, birth_date, movies {title, year, budget_in_millions, box_office_in_millions}}}"
 ```
 
 ##### JSON response
